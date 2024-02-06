@@ -4,10 +4,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+         runs:
+         using: 'node20'
+         pre: 'setup.js'
+         main: 'index.js'
+        post: 'cleanup.js'
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: npm install -g npm
+        run: npm ci
       - name: Lint
         run: npm run lint
       - name: Test code
