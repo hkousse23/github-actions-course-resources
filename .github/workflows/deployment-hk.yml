@@ -8,7 +8,7 @@ jobs:
          using: 'node20'
          pre: 'setup.js'
          main: 'index.js'
-        post: 'cleanup.js'
+         post: 'cleanup.js'
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
