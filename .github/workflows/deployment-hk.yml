@@ -1,6 +1,3 @@
-name: Setup Node.js environment
-uses: actions/setup-node@v4.0.1
-
 name: Deployment Exercise 1
 on:
   push:
@@ -11,6 +8,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.1
+        
       - name: Get code
         uses: actions/checkout@v4
 
