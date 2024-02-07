@@ -1,0 +1,22 @@
+name: Deployment Exercise 
+on: push 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults: 
+      run: 
+        shell: bash 
+        working-directory: ./Code/02 Basics/05 Practice Project(Finished)
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Test code
+        run: npm run test
+      - name: Build code
+        run: npm run build
+      - name: Deploy code
+        run: echo "Deploying..."
