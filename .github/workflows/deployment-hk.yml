@@ -1,4 +1,4 @@
-name: Deployment Exercise 
+name: Deployment Exercise
 on: push 
 jobs:
   deploy:
@@ -6,7 +6,7 @@ jobs:
     defaults: 
       run: 
         shell: bash 
-        working-directory: /Code/02 Basics/05 Practice Project(Finished)
+        working-directory: Code/02 Basics/05 Practice Project (Finished)
     steps:
       - name: Get code
         uses: actions/checkout@v4
