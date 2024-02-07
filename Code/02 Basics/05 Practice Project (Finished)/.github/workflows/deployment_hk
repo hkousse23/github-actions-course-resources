@@ -3,6 +3,10 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults: 
+      run: 
+        shell: bash 
+        working-directory: ./Code/02 Basics/05 Practice Project(Finished)
     steps:
       - name: Get code
         uses: actions/checkout@v4
